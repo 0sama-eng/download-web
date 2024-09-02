@@ -1,0 +1,15 @@
+@keyframes move {
+   0%{
+      width: 0px;
+   }
+   90%{
+      width: 450px;
+   }
+   
+}
+#div1,p,#p1{
+   display: inline-block;
+}
+#btn{
+   display: block;
+}

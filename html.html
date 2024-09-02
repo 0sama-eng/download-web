@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+     <div id="div1"></div>
+     <p id="p"></p>
+     <p id="p1"></p>
+     <div id="div2"></div>
+     <br>
+     <button id="btn" onclick="ad()">Download</button>
+     <script> 
+     var g=0; 
+     let x=null;
+     function changewidth(){
+        
+     }
+     function sd(){
+               
+               let y= document.getElementById("div1");
+               y.innerHTML = g;
+               let f= document.getElementById("p");
+               f.innerHTML = "%";
+               let c= document.getElementById("div2");
+               c.style.height="10px" ;
+               c.style.width="0px";
+               c.style.animation="move";
+               c.style.backgroundColor="green";
+               c.style.animationDuration="10s";
+               g+=10;
+               
+               if(g>110){
+               clearInterval(x);
+               document.getElementById("p1").innerHTML="completed!";
+               y.style.display="none";
+               f.style.display="none";
+               c.style.display="none";
+               }      
+    }
+     function ad(){
+     x = setInterval(sd,500);
+     }
+     </script>
+</body>
+</html>

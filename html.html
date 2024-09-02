@@ -8,12 +8,16 @@
     
 </head>
 <body>
-     <div id="div1"></div>
-     <p id="p"></p>
-     <p id="p1"></p>
+   <div id="maindiv">
+     <nav>     
+       <div id="div1"></div>
+       <p id="p"></p>
+       <p id="p1"></p>
+     </nav>
      <div id="div2"></div>
      <br>
-     <button id="btn" onclick="ad()">Download</button>
+     <button id="btn" onclick="ad()"><span>Download</span></button>
+   </div>
      <script> 
      var g=0; 
      let x=null;
@@ -32,9 +36,10 @@
                c.style.animation="move";
                c.style.backgroundColor="green";
                c.style.animationDuration="10s";
-               g+=10;
+               c.style.borderRadius="5px"
+               g++;
                
-               if(g>110){
+               if(g>101){
                clearInterval(x);
                document.getElementById("p1").innerHTML="completed!";
                y.style.display="none";
@@ -43,7 +48,7 @@
                }      
     }
      function ad(){
-     x = setInterval(sd,500);
+     x = setInterval(sd,60);
      }
      </script>
 </body>
